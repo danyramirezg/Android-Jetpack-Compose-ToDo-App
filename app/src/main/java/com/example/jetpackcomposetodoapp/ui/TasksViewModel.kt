@@ -30,6 +30,7 @@ class TasksViewModel @Inject constructor(): ViewModel() {
         _showDialog.value = true
     }
 
+    // To check and uncheck items:
     fun onCheckBoxSelected(taskModel: TaskModel) {
         val index = _tasks.indexOf(taskModel)
         _tasks[index] = _tasks[index].let {

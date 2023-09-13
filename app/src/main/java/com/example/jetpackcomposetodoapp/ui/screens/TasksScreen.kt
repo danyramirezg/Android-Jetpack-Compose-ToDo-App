@@ -72,7 +72,7 @@ fun AddTasksDialog(show: Boolean, onDismiss: () -> Unit, onTaskAdded: (String) -
                     .padding(16.dp)
             ) {
                 Text(
-                    text = "Add the task",
+                    text = "Add your task",
                     fontSize = 18.sp,
                     modifier = Modifier.align(Alignment.CenterHorizontally),
                     fontWeight = FontWeight.Bold
@@ -108,6 +108,7 @@ fun ItemTask(taskModel: TaskModel, tasksViewModel: TasksViewModel) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp)
+            // To delete the task:
             .pointerInput(Unit){
                 detectTapGestures( onLongPress = {
                     tasksViewModel.onItemRemove(taskModel)
